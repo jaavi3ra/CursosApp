@@ -14,12 +14,14 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 
 
 @Composable
 fun BotonPrimary(
     texto: String,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+
 ) {
     Button(
         onClick = onClick,
@@ -122,5 +124,23 @@ fun BotonIcono(
             imageVector = icono,
             contentDescription = descripcion
         )
+    }
+}
+
+@Composable
+fun BotonVerCursos(
+    texto: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Button(
+        onClick = onClick,
+        modifier = modifier,
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Color(0xFF2146F3),
+            contentColor = Color.White
+        )
+    ) {
+        Text(text = texto)
     }
 }

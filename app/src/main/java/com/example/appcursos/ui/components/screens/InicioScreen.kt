@@ -20,7 +20,8 @@ import com.example.appcursos.ui.components.organisms.tituloHome
 
 @Composable
 fun InicioScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onOpcionClick: (String) -> Unit
 ) {
     Column(
         modifier = modifier
