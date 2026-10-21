@@ -38,10 +38,12 @@ fun BotonPrimary(
 @Composable
 fun BotonRojo(
     texto: String,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Button(
         onClick = onClick,
+        modifier = modifier,
         colors = ButtonDefaults.buttonColors(
             containerColor = Color.Red,
             contentColor = Color.White
